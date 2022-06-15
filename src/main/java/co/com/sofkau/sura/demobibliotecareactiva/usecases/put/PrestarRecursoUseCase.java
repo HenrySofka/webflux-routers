@@ -28,10 +28,9 @@ public class PrestarRecursoUseCase implements GuardarRecurso, ListarRecursoPorID
 
     @Override
     public Mono<String> apply(RecursoDTO recursoDTO) {
-
-        if (recursoDTO.getPrestado()){
-            return Mono.just("Recurso No Disponible --> Fecha de prestamo ["+
-                    recursoDTO.getFechaPrestamo()+"]");
+        if (recursoDTO.getPrestado()) {
+            return Mono.just("Recurso No Disponible --> Fecha de prestamo [" +
+                    recursoDTO.getFechaPrestamo() + "]");
         }
 
         recursoDTO.setFechaPrestamo(LocalDate.now());

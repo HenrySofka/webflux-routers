@@ -15,7 +15,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class PrestarRecursoRouter {
     @Bean
-    public RouterFunction<ServerResponse> prestarRecurso(PrestarRecursoUseCase useCase){
+    public RouterFunction<ServerResponse> prestarRecurso(PrestarRecursoUseCase useCase) {
         return route(PUT("/prestar/{id}").and(accept(MediaType.APPLICATION_JSON)),
                 request -> ServerResponse.ok()
                         .contentType(MediaType.TEXT_PLAIN)
