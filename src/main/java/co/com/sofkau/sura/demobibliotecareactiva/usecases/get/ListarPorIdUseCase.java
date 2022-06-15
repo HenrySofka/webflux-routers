@@ -3,7 +3,7 @@ package co.com.sofkau.sura.demobibliotecareactiva.usecases.get;
 import co.com.sofkau.sura.demobibliotecareactiva.dto.RecursoDTO;
 import co.com.sofkau.sura.demobibliotecareactiva.mappers.RecursoMapper;
 import co.com.sofkau.sura.demobibliotecareactiva.repositories.IRecursoRepository;
-import co.com.sofkau.sura.demobibliotecareactiva.usecases.get.interfaces.ListarRecursoPorID;
+import co.com.sofkau.sura.demobibliotecareactiva.usecases.interfaces.ListarRecursoPorID;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import reactor.core.publisher.Mono;

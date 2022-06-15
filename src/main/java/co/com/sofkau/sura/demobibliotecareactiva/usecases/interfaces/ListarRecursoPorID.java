@@ -1,4 +1,4 @@
-package co.com.sofkau.sura.demobibliotecareactiva.usecases.get.interfaces;
+package co.com.sofkau.sura.demobibliotecareactiva.usecases.interfaces;
 
 import co.com.sofkau.sura.demobibliotecareactiva.dto.RecursoDTO;
 import reactor.core.publisher.Mono;
