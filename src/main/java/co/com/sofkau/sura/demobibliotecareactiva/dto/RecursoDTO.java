@@ -17,6 +17,9 @@ public class RecursoDTO {
     @NotBlank
     private LocalDate fechaPrestamo;
 
+    public RecursoDTO() {
+    }
+
     public RecursoDTO(String titulo, String tipoRecurso, String areaTematica, Boolean isPrestado, LocalDate fechaPrestamo) {
         this.titulo = titulo;
         this.tipoRecurso = tipoRecurso;
