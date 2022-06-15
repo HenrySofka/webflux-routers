@@ -1,7 +1,7 @@
-package co.com.sofkau.sura.demobibliotecareactiva.router;
+package co.com.sofkau.sura.demobibliotecareactiva.router.post;
 
 import co.com.sofkau.sura.demobibliotecareactiva.dto.RecursoDTO;
-import co.com.sofkau.sura.demobibliotecareactiva.usecases.CrearRecursoUseCase;
+import co.com.sofkau.sura.demobibliotecareactiva.usecases.post.CrearRecursoUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
