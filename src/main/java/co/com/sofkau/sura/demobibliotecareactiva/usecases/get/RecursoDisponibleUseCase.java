@@ -21,13 +21,13 @@ public class RecursoDisponibleUseCase implements ListarRecursoPorID<Mono<String>
     @Override
     public Mono<String> getRecursoPorID(String id) {
         /*
-        *Consultar disponibilidad de un recurso indicando en un mensaje si esta disponible o no.
-        *En caso de no estar disponible presentar la fecha del préstamo actual del ultimo ejemplar.
-        * */
+         *Consultar disponibilidad de un recurso indicando en un mensaje si esta disponible o no.
+         *En caso de no estar disponible presentar la fecha del préstamo actual del ultimo ejemplar.
+         * */
         var recurso = repository.findById(id).map(recursoMapper.mapperRecursoToDTO());
-        var respuesta = recurso
+        return recurso
                 .flatMap(recursoDTO -> {
-                    if(recursoDTO.getPrestado()){
+                    if (recursoDTO.getPrestado()) {
                         return Mono.just(
                                 "Recurso NO disponible --> Fecha de prestamo [" +
                                         recursoDTO.getFechaPrestamo() + "]"
@@ -35,6 +35,5 @@ public class RecursoDisponibleUseCase implements ListarRecursoPorID<Mono<String>
                     }
                     return Mono.just("Recurso disponible --> Aun no se ha prestado");
                 });
-        return respuesta;
     }
 }

@@ -21,10 +21,11 @@ public class ActualizarRecursoUseCase implements GuardarRecurso {
         this.repository = repository;
         this.recursoMapper = recursoMapper;
     }
+
     @Override
     public Mono<String> apply(RecursoDTO recursoDTO) {
         return repository.save(recursoMapper
                 .mapperToRecurso(recursoDTO.getId()).apply(recursoDTO)
-        ).map(Recurso::getId);
+        ).flatMap(recurso -> Mono.just("Recurso actualizado correctamente!!"));
     }
 }
