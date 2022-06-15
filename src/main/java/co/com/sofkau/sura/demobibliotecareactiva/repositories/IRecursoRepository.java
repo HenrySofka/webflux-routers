@@ -14,4 +14,6 @@ public interface IRecursoRepository extends ReactiveMongoRepository<Recurso, Str
     * pero también por área temática (ciencias, naturaleza, historia, etc).
     * */
     public Flux<Recurso> findByTipoRecurso(String tipoRecurso);
+    public Flux<Recurso> findByAreaTematica(String areaTematica);
+    public Flux<Recurso> findByTipoRecursoAndAreaTematica(String tipoRecurso, String areaTematica);
 }
